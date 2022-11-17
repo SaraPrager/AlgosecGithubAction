@@ -11,5 +11,5 @@ jobs:
     container: saraprager/test-examples:devsecops
     steps:
       - uses: actions/checkout@v3
-      - name: Run a one-line script
+      - name: risk-analysis
         run: risk-analysis
