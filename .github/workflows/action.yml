@@ -8,8 +8,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: saraprager/test-examples:devsecops_github
+    #container: saraprager/test-examples:devsecops_github
     steps:
       - uses: actions/checkout@v3
-      - name: risk-analysis
-        run: risk-analysis
+      - uses: SaraPrager/DockerBasedAction@latest
+      #- name: risk-analysis
+      #  run: risk-analysis
