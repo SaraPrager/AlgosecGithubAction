@@ -8,15 +8,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    #container: saraprager/test-examples:devsecops_github
     steps:
       - uses: actions/checkout@v3
       - uses: SaraPrager/DockerBasedAction@latest2
-        with:
-          SECRETS: ${{ secrets }}
-          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          #CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
-          #CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
-          #CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
-      #- name: risk-analysis
-      #  run: risk-analysis
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
+          CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
+          CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
