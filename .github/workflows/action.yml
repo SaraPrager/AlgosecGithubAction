@@ -11,6 +11,6 @@ jobs:
     #container: saraprager/test-examples:devsecops_github
     steps:
       - uses: actions/checkout@v3
-      - uses: SaraPrager/DockerBasedAction@latest
+      - uses: SaraPrager/DockerBasedAction@latest2
       #- name: risk-analysis
       #  run: risk-analysis
