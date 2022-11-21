@@ -23,4 +23,4 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.AZ_CLIENT_SECRET }}
           GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
           LOG_LEVEL: DEBUG
-          FULL_ANALYSIS: false
+          FULL_ANALYSIS: true
