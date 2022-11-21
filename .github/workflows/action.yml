@@ -12,9 +12,9 @@ jobs:
       - uses: SaraPrager/DockerBasedAction@latest2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CF_CLIENT_ID: ${{ secrets.ANZ_CF_CLIENT_ID }}
-          CF_CLIENT_SECRET: ${{ secrets.ANZ_CF_CLIENT_SECRET }}
-          CF_TENANT_ID: ${{ secrets.ANZ_CF_TENANT_ID }}
+          CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
+          CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
+          CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.AZ_SUBSCRIPTION_ID }}
@@ -22,7 +22,6 @@ jobs:
           ARM_CLIENT_ID: ${{ secrets.AZ_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.AZ_CLIENT_SECRET }}
           GCP_CREDENTIALS: ${{ secrets.GCP_CREDENTIALS }}
-          CF_REGION: anz
-          LOG_LEVEL: DEBUG
-          FULL_ANALYSIS: true
+          LOG_LEVEL: ERROR
+          FULL_ANALYSIS: false
           STOP_WHEN_FAIL: false
