@@ -24,4 +24,4 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
           LOG_LEVEL: DEBUG
           FULL_ANALYSIS: true
-          STOP_WHEN_FAIL: true
+          STOP_WHEN_FAIL: false
