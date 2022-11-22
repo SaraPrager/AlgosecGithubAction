@@ -12,7 +12,6 @@ jobs:
       - uses: SaraPrager/DockerBasedAction@latest2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CF_API_URL: 'https://prod.cloudflow/api/fake'
           CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
           CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
           CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
