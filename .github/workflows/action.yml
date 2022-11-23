@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: SaraPrager/DockerBasedAction@latest2
+      - name: IAC connectivity risk analysis
+        uses: algosec/connectivity-risk-analysis-action@release_90
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
