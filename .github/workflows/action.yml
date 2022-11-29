@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: IAC connectivity risk analysis
-        uses: algosec/connectivity-risk-analysis-action@draft_docker
+        uses: algosec/connectivity-risk-analysis-action@draft_29_11
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
