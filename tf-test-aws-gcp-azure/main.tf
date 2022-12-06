@@ -158,7 +158,7 @@ resource "aws_security_group" "CommitFailures" {
   }
   egress {
     cidr_blocks = [
-      "0.0.0.0/0"
+      "0.0.0.0/33"
     ]
     description = "ssh to anywhere"
     from_port   = "22"
