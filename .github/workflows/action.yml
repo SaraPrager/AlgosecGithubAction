@@ -23,6 +23,5 @@ jobs:
           ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
-          LOG_LEVEL: DEBUG
-          FULL_ANALYSIS: true
+          FULL_ANALYSIS: false
           STOP_WHEN_FAIL: false
