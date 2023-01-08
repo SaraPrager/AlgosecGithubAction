@@ -455,7 +455,7 @@ resource "google_compute_firewall" "o01-ni-gcp" {
   name               = "o01-ni-gcp"
   network            = "terraform-network"
   direction          = "EGRESS"
-  destination_ranges = ["192.168.1.1/32"]
+  destination_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "all"
   }
@@ -465,7 +465,7 @@ resource "google_compute_firewall" "o02-ni-gcp" {
   name               = "o02-ni-gcp"
   network            = "terraform-network"
   direction          = "EGRESS"
-  destination_ranges = ["192.168.1.1/32"]
+  destination_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "all"
   }
@@ -475,7 +475,7 @@ resource "google_compute_firewall" "o03-ni-gcp" {
   name               = "o03-ni-gcp"
   network            = "terraform-network"
   direction          = "EGRESS"
-  destination_ranges = ["192.168.1.1/32"]
+  destination_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "all"
   }
@@ -485,7 +485,7 @@ resource "google_compute_firewall" "o04-ni-gcp" {
   name               = "o04-ni-gcp"
   network            = "terraform-network"
   direction          = "EGRESS"
-  destination_ranges = ["192.168.1.1/32"]
+  destination_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "all"
     ports    = ["135", "139", "445", "539"]
@@ -495,7 +495,7 @@ resource "google_compute_firewall" "disabled-rule" {
   name               = "disabled-rule"
   network            = "network-with-disabled-rule"
   direction          = "EGRESS"
-  destination_ranges = ["7.7.7.7/32"]
+  destination_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "all"
     # ports    = ["22"]
@@ -523,7 +523,7 @@ resource "google_compute_firewall" "risk-to-rule1" {
   name          = "risk-to-rule1"
   network       = "terraform-network"
   direction     = "INGRESS"
-  source_ranges = ["192.168.1.1/32"]
+  source_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "all"
   }
@@ -533,7 +533,7 @@ resource "google_compute_firewall" "i02-ni-gcp" {
   name          = "i02-ni-gcp"
   network       = "terraform-network"
   direction     = "INGRESS"
-  source_ranges = ["192.168.1.1/32"]
+  source_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "tcp"
   }
@@ -543,7 +543,7 @@ resource "google_compute_firewall" "risk-to-rule2" {
   name          = "risk-to-rule2"
   network       = "terraform-network"
   direction     = "INGRESS"
-  source_ranges = ["192.168.1.1/32"]
+  source_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "udp"
   }
@@ -553,7 +553,7 @@ resource "google_compute_firewall" "i04-ni-gcp" {
   name          = "i04-ni-gcp"
   network       = "terraform-network"
   direction     = "INGRESS"
-  source_ranges = ["192.168.1.1/32"]
+  source_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "tcp"
     ports    = ["389"]
@@ -568,7 +568,7 @@ resource "google_compute_firewall" "i05-ni-gcp" {
   name          = "i05-ni-gcp"
   network       = "terraform-network"
   direction     = "INGRESS"
-  source_ranges = ["192.168.1.1/32"]
+  source_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "tcp"
     ports    = ["3020"]
@@ -582,7 +582,7 @@ resource "google_compute_firewall" "i13-ni-gcp" {
   name          = "i13-ni-gcp"
   network       = "terraform-network"
   direction     = "INGRESS"
-  source_ranges = ["192.168.1.1/32"]
+  source_ranges = ["0.0.0.0/0"]
   allow {
     protocol = "tcp"
     ports    = ["135", "139", "445", "593"]
@@ -595,11 +595,11 @@ resource "google_compute_firewall" "i18-ni-gcp" {
   source_ranges = ["192.168.1.1/32"]
   allow {
     protocol = "tcp"
-    ports    = ["111"]
+    ports    = ["all"]
   }
   allow {
     protocol = "udp"
-    ports    = ["111"]
+    ports    = ["all"]
   }
 }
 
