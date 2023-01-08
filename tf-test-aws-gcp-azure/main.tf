@@ -457,7 +457,7 @@ resource "google_compute_firewall" "o01-ni-gcp" {
   direction          = "EGRESS"
   destination_ranges = ["192.168.1.1/32"]
   allow {
-    protocol = "tcp"
+    protocol = "all"
   }
 }
 
@@ -477,7 +477,7 @@ resource "google_compute_firewall" "o03-ni-gcp" {
   direction          = "EGRESS"
   destination_ranges = ["192.168.1.1/32"]
   allow {
-    protocol = "udp"
+    protocol = "all"
   }
 }
 
@@ -487,7 +487,7 @@ resource "google_compute_firewall" "o04-ni-gcp" {
   direction          = "EGRESS"
   destination_ranges = ["192.168.1.1/32"]
   allow {
-    protocol = "tcp"
+    protocol = "all"
     ports    = ["135", "139", "445", "539"]
   }
 }
@@ -497,8 +497,8 @@ resource "google_compute_firewall" "disabled-rule" {
   direction          = "EGRESS"
   destination_ranges = ["7.7.7.7/32"]
   allow {
-    protocol = "tcp"
-    ports    = ["22"]
+    protocol = "all"
+    # ports    = ["22"]
   }
   disabled = true
 }
@@ -515,8 +515,8 @@ resource "google_compute_firewall" "qa-auto-service-account-rule" {
   target_service_accounts = ["qa-service-account-id@cloudflow-qa-gcp1.iam.gserviceaccount.com"]
   destination_ranges      = ["0.0.0.0/0"]
   allow {
-    protocol = "tcp"
-    ports    = ["8888"]
+    protocol = "all"
+    # ports    = ["8888"]
   }
 }
 resource "google_compute_firewall" "risk-to-rule1" {
