@@ -13,9 +13,11 @@ jobs:
         uses: algosec/connectivity-risk-analysis-action@draft_docker
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
-          CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
-          CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
+          CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID_7305 }}
+          CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET_7305 }}
+          CF_TENANT_ID: ${{ secrets.CF_TENANT_ID_7305 }}
+          CF_API_URL: ${{ secrets.CF_API_URL_7305 }}
+          CF_LOGIN_API: ${{ secrets.CF_LOGIN_API_7305 }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
